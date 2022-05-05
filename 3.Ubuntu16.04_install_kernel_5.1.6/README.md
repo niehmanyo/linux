@@ -1,6 +1,6 @@
-|Ubuntu|Kernel|
-|-------|-----|
-|16.04|5.1.6|
+|Ubuntu|Kernel|Course|Group|
+|-------|-----|-----|-----|
+|16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu</p><p>Zhu Qijin</p><p>Chen Nuo</p><p>Zhang Wei</p><p>Yao Lan</p>|
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/1.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/2.png"> </p>
