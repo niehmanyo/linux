@@ -5,9 +5,9 @@
 
 |Ubuntu|Kernel|Course|Group|
 |-------|-----|-----|-----|
-|16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu</p><p>Zhu Qijin</p><p>Chen Nuo</p><p>Zhang Wei</p><p>Yao Lan</p>|
+|16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
-### Installation
+### 1. Installation
 <p>Using this command to check the version of your ubuntu</p>
 
 ```bash
@@ -75,8 +75,39 @@ sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/9.png"></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/10.png"> </p>
+
+<p>After installing these package</p>
+
+```bash
+make menuconfig ## Start the kernel configuraion 
+```
+<p>Sample out after makeing, this is an menu then you can see some details about configuration. Also you can exit it, then the terminal will show '*** Execute 'make' to start the build '</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/11.png"> </p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/make_menuc.png"> </p>
+
+
+<p>Start compiling, just use 'make'; or to speed up time, use 'make -j $(nproc)'</p>
+<p>It will take a lot of time</p>
+
+```bash
+## my cpu core is 4 becasue I set 4
+make -j 4 ## Start to compile
+```
+
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/12.png"> </p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/process1.png"> </p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/process2.png"> </p>
+<p>Install the Linux kernel modules</p>
+
+```bash
+## Now using this command
+sudo make modules_install
+```
+ <p>After installing kernel modules, you will see the version of your kernel in the last</p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/modules_install.png"> </p>
+
+<p>Then </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/13.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/15.png"> </p>
