@@ -7,7 +7,7 @@
 |-------|-----|-----|-----|
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
-### 1. Installation
+## 1. Installation
 <p>Using this command to check the version of your ubuntu</p>
 
 ```bash
@@ -40,7 +40,7 @@ gpg --verify linux-5.1.6.tar.sign ## Verify it again
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/5.png"> </p>
 
-<p>Successful sample output:</p>
+<p><b>Sample output:</b></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/6.png"> </p>
 
 <p>Now,we get the "linux-5.1.6.tar" file. Then untar this tarball.</p>
@@ -107,11 +107,48 @@ sudo make modules_install
  <p>After installing kernel modules, you will see the version of your kernel in the last</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/modules_install.png"> </p>
 
-<p>Then </p>
+<p>Then I use 'uname -r' to see the version,luckily it is 4.15.0.😑 Because I have not compiled the kernel and the modules.</p>
+
+
+```bash
+sudo make install ## last part
+```
+<p><b>Sample output</b></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/13.png"> </p>
+
+```bash
+ls -a /boot ## To see all files in /boot
+```
+
+<p><b>Now there have 4 kernel_5.1.6 files:</b></p>
+<p><b>initrd.img-5.1.6</b></p>
+<p><b>System.map-5.1.6</b></p>
+<p><b>config-5.1.6</b></p>
+<p><b>vmlinuz-5.1.6</b></p>
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
+
+<p>Now,everything is ready and then upgrade grub.</p>
+
+```bash
+sudo update-initramfs -c -k 5.1.6
+sudo update-grub
+
+```
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/15.png"> </p>
+
+
+```bash
+## After finishing, reboot ubuntu
+reboot
+## ...A few minutes later
+
+uname -r
+## you will see your version 😁
+```
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/16.png"> </p>
 
 
-### Problems 
+## 2.Problems 
