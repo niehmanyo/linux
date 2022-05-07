@@ -17,8 +17,9 @@
 
 ```bash
 uname -r  ##check the version
-wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.6.tar.xz ## Get the tar.xz file,my version is 5.1.64
-																	 ## Or you can download this file in the website,I put it in my /home.
+wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.6.tar.xz 
+## Get the tar.xz file,my version is 5.1.64
+## Or you can download this file in the website,I put it in my /home.
 unxz -v linux-5.1.6.tar.xz ## To extract the source code.
 ```
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/1.png"> </p>
@@ -36,7 +37,7 @@ gpg --verify linux-5.1.6.tar.sign ## Verify it again
 * keyserver_receive failed: bad URI
 * 
 
-[Problems](#Keyserver and key)
+[Problems](#2.Problems)
 
 
 <p>I noticed that the key is 6092693E,but when I enter</p>
