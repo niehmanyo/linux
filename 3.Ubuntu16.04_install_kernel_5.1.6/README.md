@@ -1,6 +1,9 @@
-
+<p align="center">
 <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/linux_img.png">
+</p>
+
 # Install Linux Kernel 5.1.6 in Ubuntu 16.04
+
 <p><b>⚠️Warming</b>: If the Ubuntu version is 20.04, then it would be a failure in installation</p>
 <p>❤Thanks to this <a href="https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html">How to compile and install Linux Kernel 5.16.9 from source code</a> </p>
 
