@@ -52,14 +52,27 @@ tar xvf linux-5.1.6.tar
 <p>Here we get this dic "linux-5.1.6"</p>
 <p>Before start building the kernel,one must configure Linux kernel features.Then copy existing config file from your /boot</p>
 
-```bash
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/7.png"> </p>
 
+```bash
+cp -v /boot/config-$(uname -r) .config ##copy the your configuration file to this linux dic
+
+##my sample output
+'/boot/config-4.15.0-112-generic'  ->  '.config'
 
 ```
 
-
-<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/7.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/8.png"> </p>
+
+
+```bash
+sudo vim .config  ## to see the .config file (optional)
+sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf-dev
+## this package help to compile kernel
+```
+<p><a href="https://www.cyberciti.biz/tips/linux-debian-package-management-cheat-sheet.html?utm_source=Linux_Unix_Command&utm_medium=tips&utm_campaign=nixcmd">For more information about "apt-get" command </a></p>
+
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/9.png"></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/10.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/11.png"> </p>
