@@ -4,7 +4,7 @@
 
 # Install Linux Kernel 5.1.6 in Ubuntu 16.04
 
-<p><b>⚠️Warming</b>: If the Ubuntu version is 20.04, then it would be a failure in installation</p>
+<p><b>⚠️Warming</b>: If the Ubuntu version is latest(s.t Ubuntu 20.04), then it would be a failure in installation</p>
 <p>❤Thanks to this <a href="https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html">How to compile and install Linux Kernel 5.16.9 from source code</a> </p>
 
 
@@ -13,12 +13,12 @@
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
 ## 1. Installation
-<p>Using this command to check the version of your ubuntu</p>
+<p>Using this command to check the version of your kernel</p>
 
 ```bash
 uname -r  ##check the version
 wget https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.1.6.tar.xz 
-## Get the tar.xz file,my version is 5.1.64
+## Get the tar.xz file,my version is 5.1.6
 ## Or you can download this file in the website,I put it in my /home.
 unxz -v linux-5.1.6.tar.xz ## To extract the source code.
 ```
@@ -37,10 +37,10 @@ gpg --verify linux-5.1.6.tar.sign ## Verify it again
 * keyserver_receive failed: bad URI
 * 
 
-[Problems](#2.Problems)
+[Problems](# 2.Problems)
 
 
-<p>I noticed that the key is 6092693E,but when I enter</p>
+<h>I noticed that the key is 6092693E,but when I enter</h>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/2.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/3.png"> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
@@ -49,7 +49,7 @@ gpg --verify linux-5.1.6.tar.sign ## Verify it again
 <p><b>Sample output:</b></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/6.png"> </p>
 
-<p>Now,we get the "linux-5.1.6.tar" file. Then untar this tarball.</p>
+<h>Now,we get the "linux-5.1.6.tar" file. Then untar this tarball.</h>
 
 ```bash
 tar xvf linux-5.1.6.tar
@@ -61,6 +61,7 @@ tar xvf linux-5.1.6.tar
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/7.png"> </p>
 
 ```bash
+cd linux-5.1.6 ## Enter linux-5.1.6 dic 
 cp -v /boot/config-$(uname -r) .config ##copy the your configuration file to this linux dic
 
 ##my sample output
