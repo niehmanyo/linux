@@ -135,7 +135,7 @@ ls -a /boot ## To see all files in /boot
 <p><b>Now there have 3 kernel_5.1.6 files:</b></p>
 <p><b>1. initrd.img-5.1.6:</b> The initial RAM disk (initrd) is an initial root file system that is mounted prior to when the real root file system is available. The initrd is bound to the kernel and loaded as part of the kernel boot procedure. </p>
 <p><b>2. System.map-5.1.6</b>: The system.map file records the running addresses of all symbols, which can be understood as function names and variables. The System.map file can help us understand kernel compilation. The system.map file is not a layer invariant and is regenerated each time the kernel is compiled. </p>
-<p><b>3. vmlinuz-5.1.6:vmlinuxz(Virtual Memory LINUx gZip) is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run</b></p>
+<p><b>3. vmlinuz-5.1.6:</b> vmlinuxz(Virtual Memory LINUx gZip) is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run</p>
 
 <p></p>If you want to know more information,this web would give a hand:
 <p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
