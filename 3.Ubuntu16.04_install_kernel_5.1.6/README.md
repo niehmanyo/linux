@@ -13,6 +13,7 @@
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
 ## 1. Installation
+<font size=12>
 <p>Using this command to check the version of your kernel</p>
 
 ```bash
@@ -157,5 +158,5 @@ uname -r
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/16.png"> </p>
 
-
+</font>
 ## 2.Problems 
