@@ -141,6 +141,8 @@ ls -a /boot ## To see all files in /boot
 <p></p>If you want to know more information,this web would give a hand:
 <p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
 <p><a href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html">https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html</a></p>
+
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
 <h3>
 <p>Now,everything is ready and then upgrade grub.</p>
@@ -186,7 +188,12 @@ sudo apt install gparted
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted2.png"> </p>
 
 - <h3>Receive key failed</h3>
-<p>After reading a lot of blog and find the menu of 'pgp', --keyserver is a must for this command</p>
+<p>After reading a lot of blog and find the manual of 'pgp', --keyserver is a must for this command</p>
+
+```bash
+man gpg ##check the manual of gpg
+```
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/key_error.png"> </p>
 - <h3>Compilation error in Ubuntu 20.04 </h3>
 In the step of 'make', there are thousands of errors in compilation.For example:some function are not compatible, then it fails.
@@ -194,3 +201,36 @@ In the step of 'make', there are thousands of errors in compilation.For example:
  <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/20error.jpg"> </p>
  <h3>Solution:</h3>
  <p>Change to Ubuntu 16.04,then do the compilation </p>
+
+
+ # Further reading
+ <h3>make menuconfig</h3>
+
+ 1.  General setup-> System V IPC (Inter Process Communication), it is a set of systems and function libraries that allow programs to exchange information synchronously with each other. Provides a communication mechanism for processes, which will enable processes in the system to exchange information and maintain synchronization.
+
+2.  Loadable module support -> Enable loadable module support, this option allows the kernel to support modules. PS: modules is a piece of code; Some less commonly used drivers or features can be compiled into modules to reduce the size of the kernel.
+
+3.  Loadable module support -> Automatic kernel module loading, which can automatically call the ‘modprobe’ command to load modules or the command need to be called manually.
+
+4.  Processor type and features, Linux can support a variety of PC standards based on this option, generally the PCs we use follow the so-called IBM-compatible architecture (pc/at). This option lets users choose some other architecture.
+
+5.  File System -> Ext2 extended attributes
+                Ext2 POSIX Access Control Lists
+                Ext2 Security Labels
+                Ext3 extended attributes
+                Ext3 POSIX Access Control Lists
+                Ext3 Security Labels
+
+'menuconfig':Provide an interacting way to make kernel configuration based on a menu.
+<h4>Some useful configurations/setup</h4>
+
+ <h3>initrd.img</h3>
+ The initial RAM disk (initrd) is an initial root file system that is mounted prior to when the real root file system is available. The initrd is bound to the kernel and loaded as part of the kernel boot procedure.
+ <h3>System.map</h3>
+  The system.map file records the running addresses of all symbols, which can be understood as function names and variables. The System.map file can help us understand kernel compilation. The system.map file is not a layer invariant and is regenerated each time the kernel is compiled.
+ <h3>vmlinuz</h3>
+ vmlinuxz(Virtual Memory LINUx gZip) is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run
+
+<p></p>If you want to know more information,this web would give a hand:
+<p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
+<p><a href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html">https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html</a></p>
