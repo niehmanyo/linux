@@ -36,14 +36,15 @@ gpg --verify linux-5.1.6.tar.sign ## Verify it again
 
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/3.png"> </p>
-<p>We use this 'gpg --recv-keys' command but the error is no keyserver, after finding a lot of blog then the command should be</p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
+
+<p>We use this 'gpg --recv-keys' command but the error is no keyserver, the correct command should be </p>
 
 ```bash
 gpg --keyserver <keyservername> --recv-keys "key-ID"
 ## Here for the <keyservername>, we use 'keyserver.ubuntu.com'
 
 ```
-<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/5.png"> </p>
 
@@ -185,6 +186,8 @@ sudo apt install gparted
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted2.png"> </p>
 
 - <h3>Receive key failed</h3>
+<p>After reading a lot of blog and find the menu of 'pgp', --keyserver is a must for this command</p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/key_error.png"> </p>
 - <h3>Compilation error in Ubuntu 20.04 </h3>
 In the step of 'make', there are thousands of errors in compilation.For example:some function are not compatible, then it fails.
  <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/error20.jpg"> </p>
