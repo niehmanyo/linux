@@ -12,7 +12,13 @@
 |-------|-----|-----|-----|
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
+* Installation
+* Problems
+* Further Reading
+
+
 # 1. Installation
+
 <h3>
 <p>Using this command to check the version of your kernel</p>
 
@@ -204,7 +210,7 @@ In the step of 'make', there are thousands of errors in compilation.For example:
  <p>Change to Ubuntu 16.04,then do the compilation </p>
 
 
- # Further reading
+# 3.Further reading
 
  <h3>initrd.img</h3>
  The initial RAM disk (initrd) is an initial root file system that is mounted prior to when the real root file system is available. The initrd is bound to the kernel and loaded as part of the kernel boot procedure.
