@@ -13,7 +13,7 @@
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
 ## 1. Installation
-<font size=16>
+<font size=30>
 <p>Using this command to check the version of your kernel</p>
 
 ```bash
@@ -161,3 +161,16 @@ uname -r
 </font>
 
 ## 2.Problems 
+
+- <h3>Disk free space problem</h3>
+<font size="20"><p>When install the Linux kernel modules( about 9.4G for kernel version 5.1.6), there will be error when the system disk free space is not big enough--the default value for create the virtual machine is 20G, it means that the real free space for such that new virtual machine is only less than 10G(system application occupy certain space).</p></font>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/space_problem.png"> </p>
+<h4>Solution:</h4>
+<p><font size="20">Using the command to install disk management software in ubuntu:
+sudo apt install gparted
+</font></p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted.png"> </p>
+
+<p><font size="20">After downloading the GParted Partition Editor, search and open it on system application, then expand the disk capacity to more than 20 GB.
+</font></p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted2.png"> </p>
