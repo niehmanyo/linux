@@ -12,7 +12,7 @@
 |-------|-----|-----|-----|
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
-## 1. Installation
+# 1. Installation
 <h3>
 <p>Using this command to check the version of your kernel</p>
 
@@ -165,7 +165,7 @@ uname -r
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/16.png"> </p>
 </h3>
 
-## 2.Problems 
+# 2.Problems 
 
 - <h3>Disk free space problem</h3>
 <p>When install the Linux kernel modules( about 9.4G for kernel version 5.1.6), there will be error when the system disk free space is not big enough--the default value for create the virtual machine is 20G, it means that the real free space for such that new virtual machine is only less than 10G(system application occupy certain space).</p>
@@ -187,7 +187,7 @@ sudo apt install gparted
 - <h3>Receive key failed</h3>
 - <h3>Compilation error in Ubuntu 20.04 </h3>
 In the step of 'make', there are thousands of errors in compilation.For example:some function are not compatible, then it fails.
- <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/error20.png"> </p>
- <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/20error.png"> </p>
+ <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/error20.jpg"> </p>
+ <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/20error.jpg"> </p>
  <h3>Solution:</h3>
  <p>Change to Ubuntu 16.04,then do the compilation </p>
