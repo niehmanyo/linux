@@ -47,7 +47,7 @@ gpg --keyserver <keyservername> --recv-keys "key-ID"
 <p>But there still have a problem, firstly we install this kernel in Ubuntu 18.04 and 20.04, then we try the key of those version, it works. </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/5.png"> </p>
 
-<p><b>Sample output:</b></p>
+<p><color = "red" >Sample output:</color> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/6.png"> </p>
 
 <h>Now,we get the "linux-5.1.6.tar" file. Then untar this tarball.</h>
