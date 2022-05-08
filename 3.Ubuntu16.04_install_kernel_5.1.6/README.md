@@ -128,12 +128,14 @@ sudo make install ## last part
 ls -a /boot ## To see all files in /boot
 ```
 
-<p><b>Now there have 4 kernel_5.1.6 files:</b></p>
-<p><b>initrd.img-5.1.6</b></p>
-<p><b>System.map-5.1.6</b></p>
-<p><b>config-5.1.6</b></p>
-<p><b>vmlinuz-5.1.6</b></p>
+<p>Now there have 3 kernel_5.1.6 files:</p>
+<p><b>1. initrd.img-5.1.6:</b> The initial RAM disk (initrd) is an initial root file system that is mounted prior to when the real root file system is available. The initrd is bound to the kernel and loaded as part of the kernel boot procedure. </p>
+<p><b>2. System.map-5.1.6</b>: The system.map file records the running addresses of all symbols, which can be understood as function names and variables. The System.map file can help us understand kernel compilation. The system.map file is not a layer invariant and is regenerated each time the kernel is compiled. </p>
+<p><b>3. vmlinuz-5.1.6:vmlinuxz(Virtual Memory LINUx gZip) is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run</b></p>
 
+<p></p>If you want to know more information,this web would give a hand:
+<p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
+<p><a href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html">https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html</a></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
 
 <p>Now,everything is ready and then upgrade grub.</p>
@@ -167,8 +169,12 @@ uname -r
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/space_problem.png"> </p>
 <h3>Solution:</h3>
 <p>Using the command to install disk management software in ubuntu:</p>
-<p>sudo apt install gparted
-</p>
+
+```bash
+sudo apt install gparted
+```
+
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted.png"> </p>
 
 <p><font size="20">After downloading the GParted Partition Editor, search and open it on system application, then expand the disk capacity to more than 20 GB.
