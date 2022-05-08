@@ -13,7 +13,7 @@
 |16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
 ## 1. Installation
-<h4>
+<h3>
 <p>Using this command to check the version of your kernel</p>
 
 ```bash
@@ -32,19 +32,19 @@ gpg --verify linux-5.1.6.tar.sign ## To get the key
 gpg --recv-keys "your key-ID"	## Enter the key you receive, usually there is no problem
 gpg --verify linux-5.1.6.tar.sign ## Verify it again							  
 ```
-
-<p>Here are problems: </p>
-
-* keyserver_receive failed: bad URI
-* 
-
-[Problems](# 2.Problems)
-
-
-<h>I noticed that the key is 6092693E,but when I enter</h>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/2.png"> </p>
+
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/3.png"> </p>
+<p>We use this 'gpg --recv-keys' command but the error is no keyserver, after finding a lot of blog then the command should be</p>
+
+```bash
+gpg --keyserver <keyservername> --recv-keys "key-ID"
+## Here for the <keyservername>, we use 'keyserver.ubuntu.com'
+
+```
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
+<p>But there still have a problem, firstly we install this kernel in Ubuntu 18.04 and 20.04, then we try the key of those version, it works. </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/5.png"> </p>
 
 <p><b>Sample output:</b></p>
@@ -160,7 +160,7 @@ uname -r
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/16.png"> </p>
 
-</h4>
+</h3>
 
 ## 2.Problems 
 
@@ -180,3 +180,6 @@ sudo apt install gparted
 <p><font size="20">After downloading the GParted Partition Editor, search and open it on system application, then expand the disk capacity to more than 20 GB.
 </font></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted2.png"> </p>
+
+- <h3>Receive key failed</h3>
+<p></p>
