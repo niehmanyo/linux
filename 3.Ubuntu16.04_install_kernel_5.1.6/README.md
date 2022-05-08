@@ -44,9 +44,10 @@ gpg --keyserver <keyservername> --recv-keys "key-ID"
 
 ```
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/4.png"> </p>
-<p>But there still have a problem, firstly we install this kernel in Ubuntu 18.04 and 20.04, then we try the key of those version, it works. </p>
+
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/5.png"> </p>
 
+<p>But there still have a problem, firstly we install this kernel in Ubuntu 18.04 and 20.04, then we try the key of those version, it works. </p>
 <p><font color = "red" >Sample output:</font> </p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/6.png"> </p>
 
@@ -89,9 +90,11 @@ sudo apt-get install build-essential libncurses-dev bison flex libssl-dev libelf
 ```bash
 make menuconfig ## Start the kernel configuraion 
 ```
-<p>Sample out after makeing, this is an menu then you can see some details about configuration. Also you can exit it, then the terminal will show '*** Execute 'make' to start the build '</p>
-<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/11.png"> </p>
+<p>Sample output</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/make_menuc.png"> </p>
+<p> after makeing, this is an menu then you can see some details about configuration. Also you can exit it, then the terminal will show '*** Execute 'make' to start the build '</p>
+<p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/11.png"> </p>
+
 
 
 <p>Start compiling, just use 'make'; or to speed up time, use 'make -j $(nproc)'</p>
@@ -127,8 +130,9 @@ sudo make install ## last part
 ```bash
 ls -a /boot ## To see all files in /boot
 ```
+</h3>
 
-<p>Now there have 3 kernel_5.1.6 files:</p>
+<p><b>Now there have 3 kernel_5.1.6 files:</b></p>
 <p><b>1. initrd.img-5.1.6:</b> The initial RAM disk (initrd) is an initial root file system that is mounted prior to when the real root file system is available. The initrd is bound to the kernel and loaded as part of the kernel boot procedure. </p>
 <p><b>2. System.map-5.1.6</b>: The system.map file records the running addresses of all symbols, which can be understood as function names and variables. The System.map file can help us understand kernel compilation. The system.map file is not a layer invariant and is regenerated each time the kernel is compiled. </p>
 <p><b>3. vmlinuz-5.1.6:vmlinuxz(Virtual Memory LINUx gZip) is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run</b></p>
@@ -137,7 +141,7 @@ ls -a /boot ## To see all files in /boot
 <p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
 <p><a href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html">https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html</a></p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
-
+<h3>
 <p>Now,everything is ready and then upgrade grub.</p>
 
 ```bash
@@ -159,13 +163,12 @@ uname -r
 ```
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/16.png"> </p>
-
 </h3>
 
 ## 2.Problems 
 
 - <h3>Disk free space problem</h3>
-<font size="20"><p>When install the Linux kernel modules( about 9.4G for kernel version 5.1.6), there will be error when the system disk free space is not big enough--the default value for create the virtual machine is 20G, it means that the real free space for such that new virtual machine is only less than 10G(system application occupy certain space).</p></font>
+<p>When install the Linux kernel modules( about 9.4G for kernel version 5.1.6), there will be error when the system disk free space is not big enough--the default value for create the virtual machine is 20G, it means that the real free space for such that new virtual machine is only less than 10G(system application occupy certain space).</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/space_problem.png"> </p>
 <h3>Solution:</h3>
 <p>Using the command to install disk management software in ubuntu:</p>
@@ -182,4 +185,9 @@ sudo apt install gparted
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/gparted2.png"> </p>
 
 - <h3>Receive key failed</h3>
-<p></p>
+- <h3>Compilation error in Ubuntu 20.04 </h3>
+In the step of 'make', there are thousands of errors in compilation.For example:some function are not compatible, then it fails.
+ <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/error20.png"> </p>
+ <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/20error.png"> </p>
+ <h3>Solution:</h3>
+ <p>Change to Ubuntu 16.04,then do the compilation </p>
