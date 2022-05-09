@@ -144,9 +144,6 @@ ls -a /boot ## To see all files in /boot
 <p><b>2. System.map-5.1.6</b> </p>
 <p><b>3. vmlinuz-5.1.6:</b></p>
 
-<p></p>If you want to know more information,this web would give a hand:
-<p><a href="https://developer.ibm.com/articles/l-initrd/">https://developer.ibm.com/articles/l-initrd/</a></p>
-<p><a href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html">https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html</a></p>
 
 
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/14.png"> </p>
