@@ -10,7 +10,7 @@
 
 |Ubuntu|Kernel|Course|Group|
 |-------|-----|-----|-----|
-|16.04|5.1.6|CST308 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
+|16.04|5.1.6|CST306 Operating System|<p>Nie Wenyu CST1909148</p><p>Zhu Qijin CST1909173</p><p>Chen Nuo CST1909128</p><p>Zhang Wei CST1909168</p><p>Yao Lan CST1909161</p>|
 
 * Installation
 * Problems
