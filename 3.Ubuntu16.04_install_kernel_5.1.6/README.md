@@ -99,7 +99,7 @@ make menuconfig ## Start the kernel configuraion
 ```
 <p>Sample output</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/make_menuc.png"> </p>
-<p> after makeing, this is an menu then you can see some details about configuration. Also you can exit it, then the terminal will show '*** Execute 'make' to start the build '</p>
+<p> after making, this is an menu then you can see some details about configuration. Also you can exit it, then the terminal will show '*** Execute 'make' to start the build '</p>
 <p> <img src="https://github.com/niehmanyo/linux/blob/main/3.Ubuntu16.04_install_kernel_5.1.6/11.png"> </p>
 
 
